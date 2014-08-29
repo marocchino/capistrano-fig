@@ -19,7 +19,7 @@ Capistrano::Configuration.instance(:must_exist).load do
   namespace :fig do
 
     desc "Rebuild the Docker containers with Fig."
-    task :backupdb, :on_error => :continue do
+    task :build do
       run "cd #{app_path} && #{fig_bin} build"
     end
 
