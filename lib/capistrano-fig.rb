@@ -20,12 +20,12 @@ Capistrano::Configuration.instance(:must_exist).load do
 
     desc "Start the Docker containers with Fig."
     task :up do
-      run "cd #{current_path} && #{fig_bin} up -d"
+      run "cd #{release_path} && #{fig_bin} up -d"
     end
 
     desc "Kill the Docker containers with Fig."
     task :kill do
-      run "cd #{current_path} && #{fig_bin} kill"
+      run "cd #{previous_release} && #{fig_bin} kill"
     end
 
   end
