@@ -20,7 +20,7 @@ Capistrano::Configuration.instance(:must_exist).load do
 
     desc "Rebuild the Docker containers with Fig."
     task :up do
-      run "cd #{app_path} && #{fig_bin} up"
+      run "cd #{app_path} && #{fig_bin} up -d"
     end
 
   end
