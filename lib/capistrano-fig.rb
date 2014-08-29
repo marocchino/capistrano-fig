@@ -14,13 +14,18 @@ Capistrano::Configuration.instance(:must_exist).load do
 
   set :fig_bin, "fig"
 
-  after "deploy:update_code", "fig:up"
+  after "deploy:update_code", "fig:kill", "fig:up"
 
   namespace :fig do
 
-    desc "Rebuild the Docker containers with Fig."
+    desc "Start the Docker containers with Fig."
     task :up do
       run "cd #{app_path} && #{fig_bin} up -d"
+    end
+
+    desc "Kill the Docker containers with Fig."
+    task :kill do
+      run "cd #{app_path} && #{fig_bin} kill"
     end
 
   end
