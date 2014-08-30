@@ -11,9 +11,9 @@ A capistrano extension used to deploy Docker containers to a remote host using F
 
 The steps this plugins tasks on deploy is as follows:
 
-1) Kill the previous container running in the old "releases" directory.
-2) Build a new frest container under our new repository (if no changes to the Dockerfile it will be very quick).
-3) Start the new container which should run instructions on setting up and/or migrating the application.
+* Kill the previous container running in the old "releases" directory.
+* Build a new frest container under our new repository (if no changes to the Dockerfile it will be very quick).
+* Start the new container which should run instructions on setting up and/or migrating the application.
 
 The following borrows heavily from approach used on the following blog:
 
