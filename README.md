@@ -9,6 +9,8 @@ A capistrano extension used to deploy Docker containers to a remote host using F
 * http://www.fig.sh
 * https://docker.com
 
+The following borrows heavily from approach used on the following blog:
+
 https://blog.docker.com/2014/08/orchestrating-docker-containers-in-production-using-fig
 
 Note: We assume you already know how to setup Capistrano on a project and have deployed with it before.
